@@ -6,7 +6,7 @@ using StardewModdingAPI.Utilities;
 using StardewValley;
 
 
-namespace SDV {
+namespace garbage_collector {
     class ModEntry : Mod {
         public override void Entry(IModHelper helper) {
             PlayerEvents.InventoryChanged += this.PlayerEvents_InventoryChanged;
@@ -24,13 +24,15 @@ namespace SDV {
                     if(item.Item.getCategoryName().Equals("Trash") && item.Item.salePrice() == 0)
                     {
                         // this.Monitor.Log($"Attempting to remove {item.Item.DisplayName} from inventory because it is trash.");
-                        if(!Game1.player.Items.Remove(item.Item))
+
+                        if (!Game1.player.Items.Remove(item.Item))
                         {
                             // this.Monitor.Log("Failed, moving onto next item.");
                             continue;
                         } else
                         {
-                            this.Monitor.Log("Done");
+
+                            // this.Monitor.Log("Done");
                         }
                     }
                 }
