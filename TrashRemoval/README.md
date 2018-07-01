@@ -1,2 +1,5 @@
-### Automatic Trash Removal
-Deletes trash added to your inventory if it has no sell value
+# garbage_collector
+#### Automatically Deletes trash added to your inventory if it has no sell value
+
+## Install:
+Simply pull the repository or download the zip and copy the `garbage_collector` folder into your `StardewValley/mods/` folder.
